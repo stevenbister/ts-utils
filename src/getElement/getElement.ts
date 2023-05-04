@@ -6,7 +6,7 @@
  * @returns An Element object representing the first element in the document that matches the specified set of CSS selectors,
  *          or null is returned if there are no matches.
  */
-export const get = (
+export const getElement = (
     selector: string,
     node: Document | HTMLElement = document
 ) => {
@@ -22,7 +22,7 @@ export const get = (
  * @returns An array containing one Element object for each element that matches at least one of the specified selectors,
  *          or an empty Array in case of no matches.
  */
-export const getAll = (
+export const getAllElements = (
     selector: string,
     node: Document | HTMLElement = document
 ) => {

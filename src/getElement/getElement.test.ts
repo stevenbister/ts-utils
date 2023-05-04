@@ -1,4 +1,4 @@
-import { get, getAll } from './get';
+import { getAllElements, getElement } from './getElement';
 
 function getExampleDOM() {
     const div = document.createElement('div');
@@ -19,7 +19,7 @@ function getExampleDOM() {
 test('gets an element from the DOM', () => {
     const container = getExampleDOM();
 
-    const list = get('.o-list', container);
+    const list = getElement('.o-list', container);
 
     expect(list?.tagName).toBe('UL');
 });
@@ -27,7 +27,7 @@ test('gets an element from the DOM', () => {
 test('gets multiple elements from the dom', () => {
     const container = getExampleDOM();
 
-    const listItems = getAll('.o-list__item', container);
+    const listItems = getAllElements('.o-list__item', container);
 
     expect(listItems?.length).toBe(6);
 });
